@@ -115,7 +115,7 @@
  * :[-1, 0, 1, 2, 3, 4, 5, 6, 7]
  */
 // zhunhan 10/13/2019 - Added the following 1 lines
-#define SERIAL_PORT_2 1
+#define SERIAL_PORT_2 0
 //#define SERIAL_PORT_3 6
 //#define SERIAL_PORT_2 -1
 
@@ -688,8 +688,6 @@
 //#define Y2_DRIVER_TYPE A4988
 //#define Z2_DRIVER_TYPE A4988
 //#define Z3_DRIVER_TYPE A4988
-//#define E0_DRIVER_TYPE A4988
-// zhunhan 9/7/2019 - Added the following lines
 #define E0_DRIVER_TYPE TMC2208
 //#define E1_DRIVER_TYPE A4988
 //#define E2_DRIVER_TYPE A4988
@@ -740,8 +738,8 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4[, E5]]]]]
  */
-// zhunhan 10/13/2019 - Added the following lines
-#define DEFAULT_AXIS_STEPS_PER_UNIT    { 80, 80, 8000, 500 }
+// zhunhan 10/26/2019 - Added the following lines
+#define DEFAULT_AXIS_STEPS_PER_UNIT    { 1600, 1600, 40960, 1520 }
 // zhunhan 10/13/2019 - Commented out the following lines
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 4000, 500 }
 
@@ -1043,6 +1041,9 @@
 // @section extruder
 
 // For direct drive extruder v9 set to true, for geared extruder set to false.
+// zhunhan 10/26/2019 - Commented the following line out
+//#define INVERT_E0_DIR false
+// zhunhan 10/26/2019 - Added the following line
 #define INVERT_E0_DIR false
 #define INVERT_E1_DIR false
 #define INVERT_E2_DIR false
@@ -1068,8 +1069,9 @@
 // @section machine
 
 // The size of the print bed
-#define X_BED_SIZE 200
-#define Y_BED_SIZE 200
+// zhunhan 10/26/2019 - Updated the following two lines from 200 to 220
+#define X_BED_SIZE 220
+#define Y_BED_SIZE 220
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
 #define X_MIN_POS 0
@@ -1089,7 +1091,8 @@
  */
 
 // Min software endstops constrain movement within minimum coordinate bounds
-#define MIN_SOFTWARE_ENDSTOPS
+// zhunhan 10/26/2019 - Commented the following line out
+// #define MIN_SOFTWARE_ENDSTOPS
 #if ENABLED(MIN_SOFTWARE_ENDSTOPS)
   #define MIN_SOFTWARE_ENDSTOP_X
   #define MIN_SOFTWARE_ENDSTOP_Y

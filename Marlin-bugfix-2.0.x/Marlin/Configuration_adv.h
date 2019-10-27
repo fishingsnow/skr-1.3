@@ -346,7 +346,10 @@
  * Multiple extruders can be assigned to the same pin in which case
  * the fan will turn on when any selected extruder is above the threshold.
  */
-#define E0_AUTO_FAN_PIN -1
+// zhunhan 10/26/2019 - Added the following lines
+#define E0_AUTO_FAN_PIN FAN1_PIN
+// zhunhan 10/26/2019 - commented out the following line
+// #define E0_AUTO_FAN_PIN -1
 #define E1_AUTO_FAN_PIN -1
 #define E2_AUTO_FAN_PIN -1
 #define E3_AUTO_FAN_PIN -1
@@ -1889,7 +1892,8 @@
    * Use for drivers that do not use a dedicated enable pin, but rather handle the same
    * function through a communication line such as SPI or UART.
    */
-  //#define SOFTWARE_DRIVER_ENABLE
+
+  // #define SOFTWARE_DRIVER_ENABLE
 
   /**
    * TMC2130, TMC2160, TMC2208, TMC2209, TMC5130 and TMC5160 only
