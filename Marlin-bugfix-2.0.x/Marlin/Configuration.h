@@ -739,7 +739,7 @@
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4[, E5]]]]]
  */
 // zhunhan 10/26/2019 - Added the following lines
-#define DEFAULT_AXIS_STEPS_PER_UNIT    { 1600, 1600, 40960, 1520 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT    { 1625, 1625, 6500, 1520 }
 // zhunhan 10/13/2019 - Commented out the following lines
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 4000, 500 }
 
